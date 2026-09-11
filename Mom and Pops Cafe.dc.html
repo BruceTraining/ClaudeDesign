@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=Karla:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #17100c; }
+  * { box-sizing: border-box; }
+  a { color: #E8B57A; text-decoration: none; }
+  a:hover { color: #F6D7AE; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes steam { 0% { opacity: 0; transform: translateY(6px) scaleX(0.9); } 45% { opacity: 0.5; } 100% { opacity: 0; transform: translateY(-14px) scaleX(1.15); } }
+</style>
+</helmet>
+<div style="background: #17100c; color: #F5EDE3; font-family: Karla, system-ui, sans-serif; min-height: 100vh; overflow-x: hidden;">
+
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 22px clamp(20px, 5vw, 64px); border-bottom: 1px solid rgba(232, 181, 122, 0.18);">
+    <div style="display: flex; align-items: baseline; gap: 10px;">
+      <span style="font-family: Newsreader, Georgia, serif; font-size: 24px; letter-spacing: 0.01em; color: #F5EDE3;">Mom &amp; Pops</span>
+      <span style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #E8B57A;">Cafe</span>
+    </div>
+    <nav style="display: flex; align-items: center; gap: clamp(16px, 3vw, 34px); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;">
+      <a href="#happy-mug" style="color: rgba(245, 237, 227, 0.72);" style-hover="color: #E8B57A;">Happy Mug</a>
+      <a href="#work" style="color: rgba(245, 237, 227, 0.72);" style-hover="color: #E8B57A;">Work Here</a>
+      <a href="#visit" style="color: rgba(245, 237, 227, 0.72);" style-hover="color: #E8B57A;">Visit</a>
+    </nav>
+  </header>
+
+  <sc-if value="{{ showTicker }}" hint-placeholder-val="{{ true }}">
+    <div style="border-bottom: 1px solid rgba(232, 181, 122, 0.18); background: #E8B57A; color: #24170F; overflow: hidden; white-space: nowrap;">
+      <div style="display: inline-flex; gap: 48px; padding: 9px 24px; animation: ticker 38s linear infinite; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; will-change: transform;">
+        <span>Gigabit ethernet at every seat</span><span>&bull;</span><span>The Happy Mug &mdash; one dollar</span><span>&bull;</span><span>Outlets, always</span><span>&bull;</span><span>Music you can think through</span><span>&bull;</span>
+        <span>Gigabit ethernet at every seat</span><span>&bull;</span><span>The Happy Mug &mdash; one dollar</span><span>&bull;</span><span>Outlets, always</span><span>&bull;</span><span>Music you can think through</span><span>&bull;</span>
+      </div>
+    </div>
+  </sc-if>
+
+  <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: center; gap: clamp(28px, 5vw, 72px); padding: clamp(40px, 7vw, 96px) clamp(20px, 5vw, 64px);">
+    <div style="min-width: 0;">
+      <p style="margin: 0 0 22px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #E8B57A;">1234 Main Street &nbsp;/&nbsp; San Francisco</p>
+      <h1 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(44px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.02em; color: #F8F1E7; text-wrap: pretty;">A quiet corner,<br />a warm cup,<br /><em style="font-style: italic; color: #E8B57A;">and real ethernet.</em></h1>
+      <p style="margin: 26px 0 0; max-width: 46ch; font-size: 17px; line-height: 1.65; color: rgba(245, 237, 227, 0.74); text-wrap: pretty;">We are a small family cafe built for the long stretch of work you have been putting off. Order the Happy Mug, take any seat, plug in, and stay as long as the afternoon lasts.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px;">
+        <a href="#happy-mug" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; background: #E8B57A; color: #24170F; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; min-height: 48px;" style-hover="background: #F6D7AE; color: #24170F;">Meet the Happy Mug</a>
+        <a href="#visit" style="display: inline-flex; align-items: center; padding: 15px 26px; border-radius: 999px; border: 1px solid rgba(232, 181, 122, 0.45); color: rgba(245, 237, 227, 0.85); font-weight: 500; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; min-height: 48px;" style-hover="border-color: #E8B57A; color: #F6D7AE;">Find us</a>
+      </div>
+    </div>
+
+    <div style="position: relative; min-width: 0;">
+      <div style="position: relative; border-radius: 4px; overflow: hidden; box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.85);">
+        <img src="uploads/coffee-art-in-a-brown-cup-with-beans-2026-03-18-12-13-42-utc.jpg" alt="The Happy Mug, a latte with heart-shaped art in a brown cup surrounded by coffee beans" style="display: block; width: 100%; height: clamp(320px, 46vw, 560px); object-fit: cover; object-position: 50% 55%;" />
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(23, 16, 12, 0.55), rgba(23, 16, 12, 0) 55%);"></div>
+      </div>
+      <div style="position: absolute; bottom: -22px; left: -14px; display: flex; align-items: center; gap: 14px; padding: 16px 22px; background: #17100c; border: 1px solid rgba(232, 181, 122, 0.3); border-radius: 999px;">
+        <span style="font-family: Newsreader, Georgia, serif; font-size: 30px; line-height: 1; color: #E8B57A;">{{ mugPrice }}</span>
+        <span style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245, 237, 227, 0.7); line-height: 1.5;">The Happy Mug<br />every day, all day</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="happy-mug" style="background: #F5EDE3; color: #24170F; padding: clamp(48px, 8vw, 110px) clamp(20px, 5vw, 64px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(28px, 5vw, 64px); align-items: end; max-width: 1180px; margin: 0 auto;">
+      <div style="min-width: 0;">
+        <p style="margin: 0 0 18px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #9A6B3C;">Our signature</p>
+        <h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(38px, 5.5vw, 64px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: pretty;">The Happy Mug</h2>
+        <p style="margin: 22px 0 0; max-width: 42ch; font-size: 17px; line-height: 1.65; color: rgba(36, 23, 15, 0.74); text-wrap: pretty;">A double shot pulled to order, steamed whole milk, and a heart on top because Pop has never once handed over a plain one. It costs a dollar. It has always cost a dollar.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(36, 23, 15, 0.16); min-width: 0;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(36, 23, 15, 0.16);">
+          <span style="font-family: Newsreader, Georgia, serif; font-size: 22px;">Happy Mug</span>
+          <span style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 15px; color: #9A6B3C;">{{ mugPrice }}</span>
+        </div>
+        <div style="padding: 18px 0; border-bottom: 1px dashed rgba(36, 23, 15, 0.3);">
+          <p style="margin: 0; font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; line-height: 1.7; letter-spacing: 0.06em; color: rgba(36, 23, 15, 0.55);">Rest of the menu goes here &mdash; send us the items and prices and we'll set them in this list.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="padding: clamp(48px, 8vw, 110px) clamp(20px, 5vw, 64px);">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <p style="margin: 0 0 18px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #E8B57A;">Built for the workday</p>
+      <h2 style="margin: 0 0 clamp(30px, 4vw, 56px); font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(34px, 5vw, 58px); line-height: 1.05; letter-spacing: -0.02em; color: #F8F1E7; max-width: 26ch; text-wrap: pretty;">Everything a laptop needs, nothing it doesn't.</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: rgba(232, 181, 122, 0.2);">
+        <div style="background: #17100c; padding: clamp(26px, 3vw, 40px); min-width: 0;">
+          <span style="display: block; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.2em; color: #E8B57A;">01</span>
+          <h3 style="margin: 16px 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 26px; color: #F8F1E7;">Gigabit ethernet</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: rgba(245, 237, 227, 0.7); text-wrap: pretty;">Free, wired, and fast enough to push a build or hold a call without the apology. Wi-Fi too, if you'd rather.</p>
+        </div>
+        <div style="background: #17100c; padding: clamp(26px, 3vw, 40px); min-width: 0;">
+          <span style="display: block; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.2em; color: #E8B57A;">02</span>
+          <h3 style="margin: 16px 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 26px; color: #F8F1E7;">An outlet per seat</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: rgba(245, 237, 227, 0.7); text-wrap: pretty;">Every seat in the room has power within arm's reach. No hunting, no extension cord diplomacy.</p>
+        </div>
+        <div style="background: #17100c; padding: clamp(26px, 3vw, 40px); min-width: 0;">
+          <span style="display: block; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.2em; color: #E8B57A;">03</span>
+          <h3 style="margin: 16px 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 26px; color: #F8F1E7;">Music kept calm</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: rgba(245, 237, 227, 0.7); text-wrap: pretty;">Low, slow, and instrumental on purpose. Mom picks the playlist and she does not take requests for anything with a chorus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" style="border-top: 1px solid rgba(232, 181, 122, 0.18); padding: clamp(48px, 8vw, 100px) clamp(20px, 5vw, 64px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(28px, 5vw, 64px); max-width: 1180px; margin: 0 auto; align-items: start;">
+      <div style="min-width: 0;">
+        <p style="margin: 0 0 18px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #E8B57A;">Come sit down</p>
+        <h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(34px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.02em; color: #F8F1E7;">Mom and Pops Cafe</h2>
+        <p style="margin: 24px 0 0; font-family: Newsreader, Georgia, serif; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.5; color: rgba(245, 237, 227, 0.82);">1234 Main Street<br />San Francisco, CA 90411</p>
+        <a href="https://maps.google.com/?q=1234+Main+Street+San+Francisco+CA+90411" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; padding: 15px 26px; border-radius: 999px; background: #E8B57A; color: #24170F; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; min-height: 48px;" style-hover="background: #F6D7AE; color: #24170F;">Get directions</a>
+      </div>
+      <div style="min-width: 0; border-left: 1px solid rgba(232, 181, 122, 0.2); padding-left: clamp(20px, 3vw, 40px);">
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: rgba(245, 237, 227, 0.7); max-width: 40ch; text-wrap: pretty;">Family owned, and every seat is wired and powered. Send us your hours, seating notes, and anything else regulars should know &mdash; we'll post it right here.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid rgba(232, 181, 122, 0.18); padding: 26px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245, 237, 227, 0.45);">
+    <span>Mom and Pops Cafe</span>
+    <span>1234 Main Street, San Francisco</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;mugPrice&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;$1&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Content&quot; },
+  &quot;showTicker&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Layout&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      mugPrice: this.props.mugPrice ?? "$1",
+      showTicker: this.props.showTicker ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
