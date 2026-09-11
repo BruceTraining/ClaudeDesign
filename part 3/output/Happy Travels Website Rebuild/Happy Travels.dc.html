@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Travels — Travel Agency &amp; Vacation Planning Since 1998</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #f7e7c4; -webkit-font-smoothing: antialiased; }
+  a { color: #f4dc3c; text-decoration: none; }
+  a:hover { color: #ffffff; }
+  @keyframes ht-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes ht-spin { from { transform: rotate(-8deg); } to { transform: rotate(4deg); } }
+</style>
+</helmet>
+
+<div style="background:#f7e7c4; padding:16px; font-family:'Bearskin','Space Mono',ui-monospace,monospace">
+<div style="background:#4a7cb0; overflow:hidden">
+
+  <header style="display:flex; flex-wrap:wrap; gap:16px 28px; align-items:center; justify-content:space-between; padding:22px clamp(20px,4vw,56px) 10px">
+    <div style="display:flex; flex-direction:column; gap:4px">
+      <span style="font-family:'Armageda','Anton',sans-serif; font-size:26px; letter-spacing:.06em; color:#f7e7c4; line-height:1">HAPPY TRAVELS</span>
+      <span style="font-size:10px; letter-spacing:.24em; color:#f4dc3c">SAN FRANCISCO, CALIFORNIA</span>
+    </div>
+    <nav style="display:flex; flex-wrap:wrap; gap:10px 22px; font-size:11px; letter-spacing:.18em">
+      <a href="#trips">TRIPS</a>
+      <a href="#agents">AGENTS</a>
+      <a href="#how">HOW IT WORKS</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <section style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(16px,3vw,44px); align-items:center; padding:clamp(18px,3vw,34px) clamp(20px,4vw,56px) clamp(30px,4vw,52px)">
+    <div style="min-width:0">
+      <p style="margin:0 0 14px; font-size:12px; letter-spacing:.34em; color:#f7e7c4">A FAMILY BUSINESS PRESENTS</p>
+      <h1 style="margin:0; font-family:'Armageda','Anton',sans-serif; font-size:clamp(54px,9.5vw,132px); line-height:.84; letter-spacing:.01em; color:#f7e7c4; text-shadow:7px 7px 0 #1e3a5c; text-wrap:balance">HAPPY<br>TRAVELS</h1>
+      <p style="margin:22px 0 0; max-width:34ch; font-size:14px; line-height:1.7; color:#f7e7c4">Travel Agency &amp; Vacation Planning Since 1998. Beach, city or mountain — we have the trip for YOU.</p>
+
+      <div style="display:inline-flex; margin:26px 0 0; transform:rotate(-2deg)">
+        <a href="tel:+14155550199" style="display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; background:#f4dc3c; color:#1e3a5c; padding:14px 24px; box-shadow:6px 6px 0 #1e3a5c">
+          <span style="font-family:'Armageda','Anton',sans-serif; font-size:26px; letter-spacing:.04em">BOOK NOW!</span>
+          <span style="font-size:15px; font-weight:700; letter-spacing:.06em">(415) 555-0199</span>
+        </a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:9px; margin-top:34px; font-size:15px; letter-spacing:.13em; color:#f7e7c4">
+        <span>FLIGHTS &amp; HOTELS</span>
+        <span>CRUISES &amp; RENTAL CARS</span>
+        <span>COMPLETE VACATION PACKAGES</span>
+      </div>
+    </div>
+
+    <div style="position:relative; min-width:0">
+      <div style="position:relative; width:100%; aspect-ratio:4/5; max-height:620px">
+        <image-slot id="hero-illo" shape="rect" placeholder="flat traveller illustration — cream / yellow / coral on blue"></image-slot>
+      </div>
+      <sc-if value="{{ showSaleStarburst }}" hint-placeholder-val="{{ true }}">
+        <div style="position:absolute; top:-14px; right:-6px; width:clamp(150px,20vw,200px); aspect-ratio:1; background:#f4dc3c; display:grid; place-items:center; text-align:center; transform:rotate(-6deg); clip-path:polygon(50% 0%,61% 20%,80% 9%,79% 30%,100% 35%,84% 50%,100% 65%,79% 70%,80% 91%,61% 80%,50% 100%,39% 80%,20% 91%,21% 70%,0% 65%,16% 50%,0% 35%,21% 30%,20% 9%,39% 20%)">
+          <div style="padding:0 12px">
+            <div style="font-family:'Armageda','Anton',sans-serif; font-size:clamp(28px,4vw,40px); line-height:.9; color:#1e3a5c">SAVE<br>20%</div>
+            <div style="margin-top:6px; font-size:9px; font-weight:700; letter-spacing:.12em; color:#1e3a5c">BOOK BEFORE<br>JUNE 30</div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <sc-if value="{{ showTicker }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#f4dc3c; border-top:3px solid #1e3a5c; border-bottom:3px solid #1e3a5c; overflow:hidden; padding:11px 0">
+      <div style="display:flex; width:max-content; animation:ht-scroll 34s linear infinite; font-size:13px; font-weight:700; letter-spacing:.2em; color:#1e3a5c">
+        <span style="padding-right:44px">WE BOOK FLIGHTS · HOTELS · CRUISES · RENTAL CARS · COMPLETE VACATION PACKAGES · ONE PHONE NUMBER TO CALL ·&nbsp;</span>
+        <span style="padding-right:44px">WE BOOK FLIGHTS · HOTELS · CRUISES · RENTAL CARS · COMPLETE VACATION PACKAGES · ONE PHONE NUMBER TO CALL ·&nbsp;</span>
+      </div>
+    </div>
+  </sc-if>
+
+  <section id="how" style="padding:clamp(40px,6vw,80px) clamp(20px,4vw,56px)">
+    <h2 style="margin:0 0 8px; font-family:'Armageda','Anton',sans-serif; font-size:clamp(34px,5vw,62px); line-height:.9; color:#f7e7c4; text-shadow:5px 5px 0 #1e3a5c">HOW IT WORKS</h2>
+    <p style="margin:0 0 34px; font-size:13px; letter-spacing:.16em; color:#f4dc3c">THREE STEPS. THAT'S IT.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px">
+      <div style="background:#f7e7c4; padding:26px; box-shadow:8px 8px 0 #1e3a5c">
+        <div style="font-family:'Armageda','Anton',sans-serif; font-size:44px; line-height:1; color:#e8615a">01</div>
+        <h3 style="margin:10px 0 8px; font-family:'Armageda','Anton',sans-serif; font-size:22px; letter-spacing:.03em; color:#1e3a5c">YOU TALK</h3>
+        <p style="margin:0; font-size:14px; line-height:1.65; color:#2b4a6f">Tell us where you want to go and how much you want to spend.</p>
+      </div>
+      <div style="background:#f7e7c4; padding:26px; box-shadow:8px 8px 0 #1e3a5c">
+        <div style="font-family:'Armageda','Anton',sans-serif; font-size:44px; line-height:1; color:#e8615a">02</div>
+        <h3 style="margin:10px 0 8px; font-family:'Armageda','Anton',sans-serif; font-size:22px; letter-spacing:.03em; color:#1e3a5c">WE PLAN</h3>
+        <p style="margin:0; font-size:14px; line-height:1.65; color:#2b4a6f">We plan every detail of the trip — flights, hotels, transfers, tours and travel insurance.</p>
+      </div>
+      <div style="background:#f7e7c4; padding:26px; box-shadow:8px 8px 0 #1e3a5c">
+        <div style="font-family:'Armageda','Anton',sans-serif; font-size:44px; line-height:1; color:#e8615a">03</div>
+        <h3 style="margin:10px 0 8px; font-family:'Armageda','Anton',sans-serif; font-size:22px; letter-spacing:.03em; color:#1e3a5c">YOU GO</h3>
+        <p style="margin:0; font-size:14px; line-height:1.65; color:#2b4a6f">You go on vacation and we stay on call the whole time in case anything goes wrong.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="trips" style="padding:0 clamp(20px,4vw,56px) clamp(40px,6vw,80px)">
+    <h2 style="margin:0 0 8px; font-family:'Armageda','Anton',sans-serif; font-size:clamp(34px,5vw,62px); line-height:.9; color:#f7e7c4; text-shadow:5px 5px 0 #1e3a5c">THIS SEASON'S<br>FEATURED TRIPS</h2>
+    <p style="margin:0 0 34px; font-size:13px; letter-spacing:.16em; color:#f4dc3c">PICK ONE. WE'LL DO THE REST.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(272px,1fr)); gap:24px">
+
+      <article style="display:flex; flex-direction:column; background:#f7e7c4; box-shadow:8px 8px 0 #1e3a5c">
+        <sc-if value="{{ showTripImages }}" hint-placeholder-val="{{ true }}">
+          <div style="position:relative; width:100%; aspect-ratio:4/3; border-bottom:3px solid #1e3a5c">
+            <image-slot id="trip-portugal" shape="rect" placeholder="Lisbon / Porto — flat illustration"></image-slot>
+          </div>
+        </sc-if>
+        <div style="display:flex; flex-direction:column; gap:12px; padding:24px">
+          <span style="align-self:flex-start; background:#4a7cb0; color:#f7e7c4; font-size:10px; font-weight:700; letter-spacing:.18em; padding:6px 10px">8 DAYS · PORTUGAL</span>
+          <h3 style="margin:0; font-family:'Armageda','Anton',sans-serif; font-size:28px; line-height:1; letter-spacing:.02em; color:#1e3a5c">LISBON AND PORTO</h3>
+          <p style="margin:0; font-size:14px; line-height:1.65; color:#2b4a6f">Portugal's two great cities, wine country, and the coast.</p>
+          <div style="display:flex; align-items:baseline; gap:8px; margin-top:auto; background:#f4dc3c; align-self:flex-start; padding:9px 14px; box-shadow:4px 4px 0 #1e3a5c">
+            <span style="font-size:10px; font-weight:700; letter-spacing:.16em; color:#1e3a5c">FROM</span>
+            <span style="font-family:'Armageda','Anton',sans-serif; font-size:26px; color:#1e3a5c">$2,450</span>
+          </div>
+        </div>
+      </article>
+
+      <article style="display:flex; flex-direction:column; background:#f7e7c4; box-shadow:8px 8px 0 #1e3a5c">
+        <sc-if value="{{ showTripImages }}" hint-placeholder-val="{{ true }}">
+          <div style="position:relative; width:100%; aspect-ratio:4/3; border-bottom:3px solid #1e3a5c">
+            <image-slot id="trip-kyoto" shape="rect" placeholder="Kyoto in autumn — flat illustration"></image-slot>
+          </div>
+        </sc-if>
+        <div style="display:flex; flex-direction:column; gap:12px; padding:24px">
+          <span style="align-self:flex-start; background:#4a7cb0; color:#f7e7c4; font-size:10px; font-weight:700; letter-spacing:.18em; padding:6px 10px">10 DAYS · JAPAN</span>
+          <h3 style="margin:0; font-family:'Armageda','Anton',sans-serif; font-size:28px; line-height:1; letter-spacing:.02em; color:#1e3a5c">KYOTO IN AUTUMN</h3>
+          <p style="margin:0; font-size:14px; line-height:1.65; color:#2b4a6f">Temples, gardens, and the fall colors, with a night in a ryokan.</p>
+          <div style="display:flex; align-items:baseline; gap:8px; margin-top:auto; background:#f4dc3c; align-self:flex-start; padding:9px 14px; box-shadow:4px 4px 0 #1e3a5c">
+            <span style="font-size:10px; font-weight:700; letter-spacing:.16em; color:#1e3a5c">FROM</span>
+            <span style="font-family:'Armageda','Anton',sans-serif; font-size:26px; color:#1e3a5c">$3,900</span>
+          </div>
+        </div>
+      </article>
+
+      <article style="display:flex; flex-direction:column; background:#f7e7c4; box-shadow:8px 8px 0 #1e3a5c">
+        <sc-if value="{{ showTripImages }}" hint-placeholder-val="{{ true }}">
+          <div style="position:relative; width:100%; aspect-ratio:4/3; border-bottom:3px solid #1e3a5c">
+            <image-slot id="trip-patagonia" shape="rect" placeholder="Patagonia hiking — flat illustration"></image-slot>
+          </div>
+        </sc-if>
+        <div style="display:flex; flex-direction:column; gap:12px; padding:24px">
+          <span style="align-self:flex-start; background:#4a7cb0; color:#f7e7c4; font-size:10px; font-weight:700; letter-spacing:.18em; padding:6px 10px">12 DAYS · CHILE</span>
+          <h3 style="margin:0; font-family:'Armageda','Anton',sans-serif; font-size:28px; line-height:1; letter-spacing:.02em; color:#1e3a5c">PATAGONIA ON FOOT</h3>
+          <p style="margin:0; font-size:14px; line-height:1.65; color:#2b4a6f">Guided hiking in Torres del Paine, all lodges and meals included.</p>
+          <div style="display:flex; align-items:baseline; gap:8px; margin-top:auto; background:#f4dc3c; align-self:flex-start; padding:9px 14px; box-shadow:4px 4px 0 #1e3a5c">
+            <span style="font-size:10px; font-weight:700; letter-spacing:.16em; color:#1e3a5c">FROM</span>
+            <span style="font-family:'Armageda','Anton',sans-serif; font-size:26px; color:#1e3a5c">$4,800</span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p style="margin:22px 0 0; font-size:11px; line-height:1.6; color:#f7e7c4">* Prices are per person, double occupancy, airfare not included. Prices subject to change without notice.</p>
+  </section>
+
+  <section style="padding:0 clamp(20px,4vw,56px) clamp(40px,6vw,80px)">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:18px 32px; background:#f4dc3c; padding:clamp(24px,3vw,38px); box-shadow:8px 8px 0 #1e3a5c">
+      <span style="font-family:'Armageda','Anton',sans-serif; font-size:clamp(38px,6vw,72px); line-height:.9; color:#1e3a5c">$150</span>
+      <div style="min-width:220px; flex:1">
+        <h3 style="margin:0 0 6px; font-family:'Armageda','Anton',sans-serif; font-size:24px; letter-spacing:.03em; color:#1e3a5c">PLANNING FEE PER TRIP</h3>
+        <p style="margin:0; font-size:14px; line-height:1.6; color:#2b4a6f">And it's credited toward your trip when you book with us. No surprises.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="agents" style="padding:0 clamp(20px,4vw,56px) clamp(40px,6vw,80px)">
+    <h2 style="margin:0 0 8px; font-family:'Armageda','Anton',sans-serif; font-size:clamp(34px,5vw,62px); line-height:.9; color:#f7e7c4; text-shadow:5px 5px 0 #1e3a5c">MEET OUR AGENTS</h2>
+    <p style="margin:0 0 34px; font-size:13px; letter-spacing:.16em; color:#f4dc3c">TWO HUMANS. NO CALL CENTRE.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px">
+      <article style="display:flex; flex-wrap:wrap; gap:22px; background:#f7e7c4; padding:26px; box-shadow:8px 8px 0 #1e3a5c">
+        <image-slot id="agent-marisol" shape="circle" style="width:120px;height:120px;flex:none" placeholder="Marisol portrait"></image-slot>
+        <div style="flex:1; min-width:180px">
+          <h3 style="margin:0; font-family:'Armageda','Anton',sans-serif; font-size:30px; letter-spacing:.02em; color:#1e3a5c">MARISOL</h3>
+          <p style="margin:4px 0 12px; font-size:11px; font-weight:700; letter-spacing:.16em; color:#e8615a">OWNER &amp; SENIOR AGENT</p>
+          <p style="margin:0; font-size:14px; line-height:1.7; color:#2b4a6f">Marisol founded Happy Travels in 1998 and has personally visited 41 countries. She specializes in Europe and South America and she speaks Spanish and Portuguese.</p>
+        </div>
+      </article>
+      <article style="display:flex; flex-wrap:wrap; gap:22px; background:#f7e7c4; padding:26px; box-shadow:8px 8px 0 #1e3a5c">
+        <image-slot id="agent-teo" shape="circle" style="width:120px;height:120px;flex:none" placeholder="Teo portrait"></image-slot>
+        <div style="flex:1; min-width:180px">
+          <h3 style="margin:0; font-family:'Armageda','Anton',sans-serif; font-size:30px; letter-spacing:.02em; color:#1e3a5c">TEO</h3>
+          <p style="margin:4px 0 12px; font-size:11px; font-weight:700; letter-spacing:.16em; color:#e8615a">TRAVEL AGENT</p>
+          <p style="margin:0; font-size:14px; line-height:1.7; color:#2b4a6f">Teo joined in 2009 and is our Asia and Pacific specialist. He has lived in Japan for 3 years and he plans all of our hiking and adventure trips.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="faq" style="padding:0 clamp(20px,4vw,56px) clamp(40px,6vw,80px)">
+    <h2 style="margin:0 0 34px; font-family:'Armageda','Anton',sans-serif; font-size:clamp(34px,5vw,62px); line-height:.9; color:#f7e7c4; text-shadow:5px 5px 0 #1e3a5c">GOOD QUESTIONS</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px">
+      <div style="background:#f7e7c4; padding:24px; box-shadow:8px 8px 0 #1e3a5c">
+        <h3 style="margin:0 0 10px; font-family:'Armageda','Anton',sans-serif; font-size:20px; line-height:1.15; letter-spacing:.02em; color:#1e3a5c">DO YOU CHARGE A FEE?</h3>
+        <p style="margin:0; font-size:14px; line-height:1.7; color:#2b4a6f">Yes, we charge a $150 planning fee per trip, and the fee is credited toward your trip when you book with us.</p>
+      </div>
+      <div style="background:#f7e7c4; padding:24px; box-shadow:8px 8px 0 #1e3a5c">
+        <h3 style="margin:0 0 10px; font-family:'Armageda','Anton',sans-serif; font-size:20px; line-height:1.15; letter-spacing:.02em; color:#1e3a5c">DO YOU BOOK THE FLIGHTS TOO?</h3>
+        <p style="margin:0; font-size:14px; line-height:1.7; color:#2b4a6f">Yes! We book your flights, hotels, transfers, tours, and travel insurance, so you have one phone number to call.</p>
+      </div>
+      <div style="background:#f7e7c4; padding:24px; box-shadow:8px 8px 0 #1e3a5c">
+        <h3 style="margin:0 0 10px; font-family:'Armageda','Anton',sans-serif; font-size:20px; line-height:1.15; letter-spacing:.02em; color:#1e3a5c">WHAT IF SOMETHING GOES WRONG?</h3>
+        <p style="margin:0; font-size:14px; line-height:1.7; color:#2b4a6f">Call us. We answer the phone seven days a week while you are traveling, and we fix it.</p>
+      </div>
+      <div style="background:#f7e7c4; padding:24px; box-shadow:8px 8px 0 #1e3a5c">
+        <h3 style="margin:0 0 10px; font-family:'Armageda','Anton',sans-serif; font-size:20px; line-height:1.15; letter-spacing:.02em; color:#1e3a5c">CAN WE TRAVEL AS A GROUP?</h3>
+        <p style="margin:0; font-size:14px; line-height:1.7; color:#2b4a6f">Yes, we plan trips for groups of up to 12 people, such as families, friends, and clubs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:0 clamp(20px,4vw,56px) clamp(30px,4vw,50px)">
+    <div style="border-top:3px solid #f7e7c4; padding-top:clamp(28px,4vw,44px); display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:30px">
+      <div>
+        <h2 style="margin:0 0 18px; font-family:'Armageda','Anton',sans-serif; font-size:clamp(38px,5vw,60px); line-height:.9; color:#f7e7c4; text-shadow:5px 5px 0 #1e3a5c">COME<br>SAY HI</h2>
+        <p style="margin:0; font-size:14px; line-height:1.8; color:#f7e7c4">Happy Travels<br>4321 Market Street<br>San Francisco, CA 94103</p>
+      </div>
+      <div>
+        <p style="margin:0 0 10px; font-size:11px; letter-spacing:.2em; color:#f4dc3c">HOURS</p>
+        <p style="margin:0; font-size:14px; line-height:1.8; color:#f7e7c4">Tuesday to Saturday<br>10:00 AM to 6:00 PM<br>Closed Sunday &amp; Monday</p>
+      </div>
+      <div>
+        <p style="margin:0 0 10px; font-size:11px; letter-spacing:.2em; color:#f4dc3c">GET IN TOUCH</p>
+        <div style="display:inline-flex; margin-bottom:14px; transform:rotate(-1.5deg)">
+          <a href="tel:+14155550199" style="background:#f4dc3c; color:#1e3a5c; font-family:'Armageda','Anton',sans-serif; font-size:22px; letter-spacing:.03em; padding:12px 18px; box-shadow:5px 5px 0 #1e3a5c">(415) 555-0199</a>
+        </div>
+        <p style="margin:0; font-size:14px; line-height:1.8; color:#f7e7c4"><a href="mailto:info@happytravels.example" style="text-decoration:underline">info@happytravels.example</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between; padding:22px clamp(20px,4vw,56px) 26px; font-size:10px; letter-spacing:.14em; color:#cfe0ef">
+    <span>© 1998–2016 HAPPY TRAVELS. ALL RIGHTS RESERVED.</span>
+    <span>TRAVEL AGENCY &amp; VACATION PLANNING SINCE 1998</span>
+  </footer>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showSaleStarburst&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showTicker&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showTripImages&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showSaleStarburst: this.props.showSaleStarburst ?? true,
+      showTicker: this.props.showTicker ?? true,
+      showTripImages: this.props.showTripImages ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
